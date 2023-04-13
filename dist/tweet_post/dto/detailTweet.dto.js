@@ -16,9 +16,9 @@ let DetailTweetDto = class DetailTweetDto {
 };
 __decorate([
     (0, class_transformer_1.Expose)(),
-    (0, class_transformer_1.Transform)((value, obj) => obj.user.user_email),
+    (0, class_transformer_1.Transform)((value, obj) => obj.user.user_name),
     __metadata("design:type", String)
-], DetailTweetDto.prototype, "Email", void 0);
+], DetailTweetDto.prototype, "name", void 0);
 __decorate([
     (0, class_transformer_1.Expose)(),
     (0, class_validator_1.IsString)(),

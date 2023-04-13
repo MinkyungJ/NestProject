@@ -4,8 +4,8 @@ import { IsDate, IsNumber, IsOptional, IsString } from 'class-validator';
 @Exclude()
 export class DetailTweetDto {
   @Expose()
-  @Transform((value, obj) => obj.user.user_email)
-  Email: string;
+  @Transform((value, obj) => obj.user.user_name)
+  name: string;
 
   @Expose()
   @IsString()
