@@ -9,8 +9,8 @@ export class BasicTweetDto {
   id: number;
 
   @Expose()
-  @Transform((value, obj) => obj.user.user_email)
-  email: string;
+  @Transform((value, obj) => obj.user.user_name)
+  name: string;
 
   @Expose()
   @IsString()

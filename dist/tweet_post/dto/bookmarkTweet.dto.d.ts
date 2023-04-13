@@ -1,6 +1,6 @@
 export declare class BookmarkTweetDto {
     id: number;
-    email: string;
+    name: string;
     contents: string;
     likes: number;
 }
