@@ -22,9 +22,9 @@ __decorate([
 ], BookmarkTweetDto.prototype, "id", void 0);
 __decorate([
     (0, class_transformer_1.Expose)(),
-    (0, class_transformer_1.Transform)((value, obj) => obj.user.user_email),
+    (0, class_transformer_1.Transform)((value, obj) => obj.user.user_name),
     __metadata("design:type", String)
-], BookmarkTweetDto.prototype, "email", void 0);
+], BookmarkTweetDto.prototype, "name", void 0);
 __decorate([
     (0, class_transformer_1.Expose)(),
     (0, class_validator_1.IsString)(),

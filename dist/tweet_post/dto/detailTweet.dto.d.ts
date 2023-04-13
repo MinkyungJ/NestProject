@@ -1,5 +1,5 @@
 export declare class DetailTweetDto {
-    Email: string;
+    name: string;
     contents: string;
     userId: number;
     createdAt: Date;
