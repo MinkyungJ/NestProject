@@ -4,9 +4,11 @@ export class CreateTweetDto {
   @IsString()
   contents: string;
 
+  @IsOptional()
   @IsNumber()
   likes: number;
 
+  @IsOptional()
   @IsBoolean()
   bookmark: boolean;
 

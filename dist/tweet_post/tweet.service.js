@@ -32,7 +32,7 @@ let TweetPostService = class TweetPostService {
     }
     async createTweet(tweetData, userId) {
         try {
-            const data = Object.assign({}, tweetData);
+            const data = Object.assign(Object.assign({}, tweetData), { likes: 0, bookmark: false });
             data.userId = userId;
             return await this.tweetRepository.save(data);
         }
