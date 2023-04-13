@@ -30,6 +30,8 @@ export class TweetPostService {
     try {
       const data = {
         ...tweetData,
+        likes: 0,
+        bookmark: false
       };
       data.userId = userId;
       return await this.tweetRepository.save(data);
