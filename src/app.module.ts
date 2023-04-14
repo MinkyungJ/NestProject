@@ -9,6 +9,8 @@ import { TweetPostModule } from './tweet_post/tweet.module';
 import { Tweet } from './tweet_post/entities/tweet.entity';
 import { Like } from './tweet_post/entities/tweetLike.entity';
 import { Bookmark } from './tweet_post/entities/tweetBookmark.entity';
+import { TweetComment } from './tweet_comment/entities/tweet_comment.entity';
+import { TweetCommentModule } from './tweet_comment/tweet_comment.module';
 
 @Module({
   imports: [
@@ -23,12 +25,13 @@ import { Bookmark } from './tweet_post/entities/tweetBookmark.entity';
       username: process.env.DB_USER,
       password: process.env.DB_PW,
       database: process.env.DB_DATABASE,
-      entities: [User, Tweet, Like, Bookmark],
+      entities: [User, Tweet, Like, Bookmark, TweetComment],
       synchronize: true,
     }),
     UserModule,
     LoginModule,
-    TweetPostModule
+    TweetPostModule,
+    TweetCommentModule
   ],
   controllers: [AppController],
   providers: [],

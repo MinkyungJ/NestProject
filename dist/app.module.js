@@ -18,6 +18,8 @@ const tweet_module_1 = require("./tweet_post/tweet.module");
 const tweet_entity_1 = require("./tweet_post/entities/tweet.entity");
 const tweetLike_entity_1 = require("./tweet_post/entities/tweetLike.entity");
 const tweetBookmark_entity_1 = require("./tweet_post/entities/tweetBookmark.entity");
+const tweet_comment_entity_1 = require("./tweet_comment/entities/tweet_comment.entity");
+const tweet_comment_module_1 = require("./tweet_comment/tweet_comment.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -34,12 +36,13 @@ AppModule = __decorate([
                 username: process.env.DB_USER,
                 password: process.env.DB_PW,
                 database: process.env.DB_DATABASE,
-                entities: [user_entity_1.User, tweet_entity_1.Tweet, tweetLike_entity_1.Like, tweetBookmark_entity_1.Bookmark],
+                entities: [user_entity_1.User, tweet_entity_1.Tweet, tweetLike_entity_1.Like, tweetBookmark_entity_1.Bookmark, tweet_comment_entity_1.TweetComment],
                 synchronize: true,
             }),
             user_module_1.UserModule,
             login_module_1.LoginModule,
-            tweet_module_1.TweetPostModule
+            tweet_module_1.TweetPostModule,
+            tweet_comment_module_1.TweetCommentModule
         ],
         controllers: [app_controller_1.AppController],
         providers: [],
